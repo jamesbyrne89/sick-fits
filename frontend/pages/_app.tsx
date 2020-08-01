@@ -1,5 +1,5 @@
 import App, { AppProps } from 'next/app';
-import Page from '../components/Page';
+import Page from '../components/page/Page';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
     <Page>
