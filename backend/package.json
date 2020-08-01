@@ -1,37 +1,47 @@
 {
-  "name": "sick-fits-backend",
-  "version": "1.0.0",
-  "description": "the backend of sick fits",
-  "scripts": {
-    "start": "nodemon -e js,graphql -x node src/index.js",
-    "dev": "nodemon -e js,graphql -x node --inspect src/index.js",
-    "test": "jest",
-    "deploy": "prisma deploy --env-file variables.env"
-  },
-  "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "bcryptjs": "^2.4.3",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^8.2.0",
-    "graphql": "^15.3.0",
-    "graphql-cli": "^4.0.0",
-    "graphql-yoga": "^1.18.3",
-    "jsonwebtoken": "8.3.0",
-    "nodemailer": "^4.6.8",
-    "nodemon": "^2.0.4",
-    "npm-run-all": "^4.1.5",
-    "prisma": "^1.34.10",
-    "prisma-binding": "2.1.6",
-    "stripe": "^8.81.0",
-    "typescript": "^3.9.7"
-  },
-  "license": "MIT",
-  "repository": {
-    "url": "wesbos.com"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  }
+    "name": "sick-fits-backend",
+    "version": "1.0.0",
+    "description": "the backend of sick fits",
+    "scripts": {
+        "start": "nodemon -e ts,graphql -x ts-node src/index.ts",
+        "dev": "nodemon -e ts,graphql -x node --inspect -r ts-node/register src/index.ts",
+        "test": "jest",
+        "deploy": "prisma deploy --env-file variables.env",
+        "lint": "eslint ./**/*.{js,ts,tsx} --quiet --fix"
+    },
+    "dependencies": {
+        "@typescript-eslint/parser": "^3.7.1",
+        "babel-preset-env": "^1.7.0",
+        "bcryptjs": "^2.4.3",
+        "cookie-parser": "^1.4.3",
+        "dotenv": "^8.2.0",
+        "graphql": "^14.7.0",
+        "graphql-cli": "^4.0.0",
+        "graphql-yoga": "^1.18.3",
+        "jsonwebtoken": "8.3.0",
+        "nodemailer": "^4.6.8",
+        "nodemon": "^2.0.4",
+        "npm-run-all": "^4.1.5",
+        "prisma": "^1.34.10",
+        "prisma-binding": "^2.3.16",
+        "stripe": "^8.81.0",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7"
+    },
+    "license": "MIT",
+    "repository": {
+        "url": "wesbos.com"
+    },
+    "babel": {
+        "presets": [
+            "env"
+        ]
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^3.7.1",
+        "eslint": "^7.6.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "prettier": "^2.0.5"
+    }
 }
