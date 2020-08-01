@@ -4,5 +4,4 @@ node_modules/
 haters/
 .next/
 .build/
-layout.md
 variables.env

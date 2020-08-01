@@ -11,17 +11,19 @@ module.exports = {
             version: 'detect',
         },
     },
-    plugins: ['react', '@typescript-eslint', 'prettier'],
+    plugins: ['react', '@typescript-eslint'],
     extends: [
-        'airbnb',
-        'eslint:recommended',
+        'airbnb-typescript',
         'plugin:react/recommended',
-        'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
+        'prettier/react',
         'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
         'plugin:prettier/recommended',
     ],
     rules: {
-        'prettier/prettier': ['error', { singleQuote: true }],
+        'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+        'react/react-in-jsx-scope': 'off',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
     },
 };
