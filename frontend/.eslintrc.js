@@ -14,6 +14,7 @@ module.exports = {
     plugins: ['react', '@typescript-eslint'],
     extends: [
         'airbnb-typescript',
+        'eslint:recommended',
         'plugin:react/recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier/react',

@@ -26,7 +26,7 @@ export const SiteThemeProvider = ThemeProvider;
 export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
+    src: url('/radnikanext-medium-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
