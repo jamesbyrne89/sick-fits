@@ -1,10 +1,7 @@
-type User {
-    id: ID!
-    name: String!
-}
+# import * from './generated/prisma'
 
 type Mutation {
-    hi: User
+    createItem(title: String, description: String, Price: Int, image: String, largeImage: String): Item!
 }
 
 type Query {

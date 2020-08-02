@@ -11,8 +11,6 @@ const server = createServer();
 // TODO use Express middleware to handle cookies (JWT)
 // TODO use Express middleware to populate current user
 
-console.log(process.env.FRONTEND_URL);
-
 server.start(
     {
         cors: {
@@ -20,5 +18,5 @@ server.start(
             origin: process.env.FRONTEND_URL,
         },
     },
-    (details) => `Server is running on port https://localhost:${details.port}`,
+    (details) => console.log(`Server is running on port http://localhost:${details.port}`),
 );

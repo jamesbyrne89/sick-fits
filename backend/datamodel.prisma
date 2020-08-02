@@ -1,4 +1,0 @@
-model User {
-  id   ID     @id
-  name String
-}

@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config({ path: 'variables.env' });
 
 const db = new Prisma({
-    typeDefs: 'src/generated/prisma.graphql',
+    typeDefs: 'src/schema.graphql',
     endpoint: process.env.PRISMA_ENDPOINT,
     secret: process.env.PRISMA_SECRET,
     debug: false,
